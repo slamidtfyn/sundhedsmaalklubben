@@ -1,0 +1,13 @@
+.mat-toolbar {
+    font-size: 1.8em;
+    font-weight: bold;
+
+}
+
+.mat-toolbar-icon {
+    padding: 0 14px;
+  }
+  
+.mat-toolbar-spacer {
+    flex: 1 1 auto;
+  }
