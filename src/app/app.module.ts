@@ -6,42 +6,35 @@ import { RouterModule, Routes } from '@angular/router';
 
 
 import { AppComponent } from './app.component';
-import { HomeModule} from './home/home.module';
 import { MaterialModule } from './material/material.module';
+import { WhoamiComponent } from './whoami/whoami.component';
+import { HomeComponent } from './home/home.component';
+import { InfoComponent } from './info/info.component';
+import { ContactComponent } from './contact/contact.component';
 
 
 const appRoutes: Routes = [
-  // { path: 'crisis-center', component: CrisisListComponent },
-  // { path: 'hero/:id',      component: HeroDetailComponent },
-  // {
-  //   path: 'heroes',
-  //   component: HeroListComponent,
-  //   data: { title: 'Heroes List' }
-  // },
-  // { path: '',
-  //   redirectTo: '/heroes',
-  //   pathMatch: 'full'
-  // },
-  //{ path: '**', component: PageNotFoundComponent }
-  { path: '',   redirectTo: '/hjem', pathMatch: 'full' },
+  { path: '',   component:HomeComponent },
+  { path: 'ommig',   component:WhoamiComponent },
+  { path: 'klubben',   component:InfoComponent },
+  { path: 'kontakt',   component:ContactComponent },
 ];
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,   
+    WhoamiComponent, InfoComponent, ContactComponent
   ],
   imports: [
-    BrowserModule,BrowserAnimationsModule,
-   
-    HomeModule,
-
+    BrowserModule,
+    BrowserAnimationsModule,
     MaterialModule,
 
 
     RouterModule.forRoot(
       appRoutes)
-  ],exports:[
   ],
   providers: [],
   bootstrap: [AppComponent]
