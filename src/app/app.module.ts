@@ -14,10 +14,10 @@ import { ContactComponent } from './contact/contact.component';
 
 
 const appRoutes: Routes = [
-  { path: '',   component:HomeComponent },
   { path: 'ommig',   component:WhoamiComponent },
   { path: 'klubben',   component:InfoComponent },
   { path: 'kontakt',   component:ContactComponent },
+  { path: '**',   component:HomeComponent },
 ];
 
 
@@ -34,7 +34,7 @@ const appRoutes: Routes = [
 
 
     RouterModule.forRoot(
-      appRoutes)
+      appRoutes, { useHash: true })
   ],
   providers: [],
   bootstrap: [AppComponent]
